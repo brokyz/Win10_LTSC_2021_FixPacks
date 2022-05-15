@@ -23,7 +23,13 @@
 
 ## 使用方法
 
-1. 前往 release 处下载文件 `Win10_LTSC_2021_FixPacks.zip`。
+1. 前往项目 release 处下载文件 `Win10_LTSC_2021_FixPacks.zip`。
+
+​		如果速度过慢，这里提供另外的下载地址。
+
+​		文件分享地址：[https://www.123pan.com/s/yCC9-8Ig23](https://www.123pan.com/s/yCC9-8Ig23) 提取码:6666
+
+​		分享链接中的两个win10 LTSC 2021镜像分别为微软官方的64位和32位镜像。
 
 2. 解压下载的压缩包文件。
 
