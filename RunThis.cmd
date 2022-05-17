@@ -6,6 +6,7 @@ if /i "%PROCESSOR_ARCHITECTURE%" equ "AMD64" (set "arch=x64") else (set "arch=x8
 set ROOT_DIR=%~dp0
 
 :first
+cls
 echo.
 echo %ROOT_DIR%
 echo.
@@ -60,5 +61,7 @@ goto :first
 echo.
 echo Please run this by administrator privilege.
 echo.
+echo Press any key to exit.
+pause >nul
 :exit
 exit

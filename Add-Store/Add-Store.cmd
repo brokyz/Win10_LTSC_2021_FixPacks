@@ -1,5 +1,4 @@
 @echo off
-
 openfiles 1>nul 2>nul || goto :administrator
 if /i "%PROCESSOR_ARCHITECTURE%" equ "AMD64" (set "arch=x64") else (set "arch=x86")
 set "install=PowerShell -NoLogo -NoProfile -NonInteractive  -ExecutionPolicy Bypass add-appxpackage"
@@ -15,13 +14,16 @@ for /f %%i in ('dir /s/b %~dp0*NET.Native.Runtime*x64*') do %install%  %%i && ec
 echo.
 echo Microsoft.UI.Xaml x64 installing...
 for /f %%i in ('dir /s/b %~dp0*UI.Xaml*x64*') do %install%  %%i && echo Microsoft.UI.Xaml x64 installing finished
+for /f  "tokens=2-3 delims=." %%G in ('PowerShell get-appxpackage *vclib*') do  if %%G==VCLibs (goto :skipVCLibsx64)
 echo.
-for /f  "tokens=2-3 delims=." %%G in ('PowerShell get-appxpackage *vclib*') do set "ifexist=%%G" && goto :skip1
-:skip1
-if %ifexist%==VCLibs goto:skip2
 echo Microsoft.VCLibs x64 installing...
 for /f %%i in ('dir /s/b %~dp0*VCLibs*x64*') do %install%  %%i && echo Microsoft.VCLibs x64 installing finished
-:skip2
+:skipVCLibsx64
+for /f  "tokens=2-3 delims=." %%G in ('PowerShell get-appxpackage *vclib*UWP*') do  if %%G==VCLibs (goto :skipVCLibsUWPx64)
+echo.
+echo Microsoft.VCLibs UWP x64 installing...
+for /f %%i in ('dir /s/b %~dp0*VCLibs*UWP*x64*') do %install%  %%i && echo Microsoft.VCLibs UWP x64 installing finished
+:skipVCLibsUWPx64
 echo.
 echo Microsoft.WindowsStore installing...
 for /f %%i in ('dir /s/b %~dp0*WindowsStore*') do %install%  %%i && echo Microsoft.WindowsStore installing finished
@@ -39,13 +41,16 @@ for /f %%i in ('dir /s/b %~dp0*NET.Native.Runtime*x86*') do %install%  %%i && ec
 echo.
 echo Microsoft.UI.Xaml x86 installing...
 for /f %%i in ('dir /s/b %~dp0*UI.Xaml*x86*') do %install%  %%i && echo Microsoft.UI.Xaml x86 installing finished
+for /f  "tokens=2-3 delims=." %%G in ('PowerShell get-appxpackage *vclib*') do  if %%G==VCLibs (goto :skipVCLibsx86)
 echo.
-for /f  "tokens=2-3 delims=." %%G in ('PowerShell get-appxpackage *vclib*') do set "ifexist=%%G" && goto :skip3
-:skip3
-if %ifexist%==VCLibs goto:skip4
 echo Microsoft.VCLibs x86 installing...
 for /f %%i in ('dir /s/b %~dp0*VCLibs*x86*') do %install%  %%i && echo Microsoft.VCLibs x86 installing finished
-:skip4
+:skipVCLibsx86
+for /f  "tokens=2-3 delims=." %%G in ('PowerShell get-appxpackage *vclib*UWP*') do  if %%G==VCLibs (goto :skipVCLibsUWPx86)
+echo.
+echo Microsoft.VCLibs UWP x86 installing...
+for /f %%i in ('dir /s/b %~dp0*VCLibs*UWP*x86*') do %install%  %%i && echo Microsoft.VCLibs UWP x86 installing finished
+:skipVCLibsUWPx86
 echo.
 echo Microsoft.WindowsStore installing...
 for /f %%i in ('dir /s/b %~dp0*WindowsStore*') do %install%  %%i && echo Microsoft.WindowsStore installing finished
