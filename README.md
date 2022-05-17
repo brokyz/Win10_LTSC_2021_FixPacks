@@ -3,6 +3,10 @@
 
 ## 说明
 
+**本文件中的激活模块整合了luzea9903的winactivate**
+
+winactivate项目地址：https://github.com/luzea9903/winactivate
+
 **官方的Win10 LTSC 2021镜像存在的bug**
 
 - 进程`wsappx`长期占用CPU资源。
@@ -32,5 +36,9 @@
    分享链接中的两个win10 LTSC 2021镜像分别为微软官方的64位和32位镜像。
 
 2. 解压下载的压缩包文件。
+
 3. 右键以管理员权限运行`RunThis.cmd`文件。
-3. 根据提示和需求选择相应的运行选项。
+
+   ![](https://pic.imgdb.cn/item/62835e100947543129c05410.jpg)
+
+4. 根据提示和需求选择相应的运行选项。
