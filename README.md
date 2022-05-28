@@ -3,13 +3,12 @@
 
 ## 说明
 
-**本文件中的激活模块整合了luzea9903 的 winactivate和massgravel 的 Microsoft-Activation-Scripts**
+**本文件中的激活模块整合了**
 
-winactivate项目地址：https://github.com/luzea9903/winactivate
+- luzea9903 \ winactivate ：https://github.com/luzea9903/winactivate
+- massgravel \ Microsoft-Activation-Scripts ：https://github.com/massgravel/Microsoft-Activation-Scripts
 
-Microsoft-Activation-Scripts项目地址：https://github.com/massgravel/Microsoft-Activation-Scripts
-
-**两种激活方法均可以使用，随便选一个使用就可以，如果有一个失败，尝试运行另外一个**
+*两种激活方法均可以使用，随便选一个使用就可以，如果有一个失败，尝试运行另外一个*
 
 **官方的Win10 LTSC 2021镜像存在的bug**
 
