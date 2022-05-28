@@ -3,9 +3,13 @@
 
 ## 说明
 
-**本文件中的激活模块整合了luzea9903的winactivate**
+**本文件中的激活模块整合了luzea9903 的 winactivate和massgravel 的 Microsoft-Activation-Scripts**
 
 winactivate项目地址：https://github.com/luzea9903/winactivate
+
+Microsoft-Activation-Scripts项目地址：https://github.com/massgravel/Microsoft-Activation-Scripts
+
+**两种激活方法均可以使用，随便选一个使用就可以，如果有一个失败，尝试运行另外一个**
 
 **官方的Win10 LTSC 2021镜像存在的bug**
 
@@ -39,6 +43,6 @@ winactivate项目地址：https://github.com/luzea9903/winactivate
 
 3. 右键以管理员权限运行`RunThis.cmd`文件。
 
-   ![](https://pic.imgdb.cn/item/62835e100947543129c05410.jpg)
+   ![](https://pic.imgdb.cn/item/629180020947543129f91dc8.jpg)
 
 4. 根据提示和需求选择相应的运行选项。
